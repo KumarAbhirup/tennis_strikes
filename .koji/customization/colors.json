@@ -19,6 +19,8 @@
     "scoreboardForegroundColor": "#223FAA",
     "gameOverRectangleColor": "#0a0a31",
     "gameOverTextColor": "#ffffff",
+    "negativeTextColor": "#D72638",
+    "positiveTextColor": "#00CC66",
     "gameCountdownColor": "#000000"
   },
   "@@editor": [
@@ -121,6 +123,16 @@
         {
           "key": "gameOverTextColor",
           "name": "Game Over Text Color",
+          "type": "color"
+        },
+        {
+          "key": "negativeTextColor",
+          "name": "Negative Text Color",
+          "type": "color"
+        },
+        {
+          "key": "positiveTextColor",
+          "name": "Positive Text Color",
           "type": "color"
         },
         {

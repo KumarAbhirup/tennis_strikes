@@ -23,6 +23,8 @@
     "leaderboardButtonText": "LEADERBOARD",
     "gameOverText": "GAME OVER",
     "winText": "YOU WON!",
+    "pointText": "POINT!",
+    "outText": "OUT!",
     "loseText": "YOU LOST!",
     "tieText": "NICE TIE!",
     "emailInputEnabled": false,
@@ -121,6 +123,16 @@
         {
           "key": "winText",
           "name": "Win Text",
+          "type": "text"
+        },
+        {
+          "key": "pointText",
+          "name": "Point Text",
+          "type": "text"
+        },
+        {
+          "key": "outText",
+          "name": "Out Text",
           "type": "text"
         },
         {

@@ -17,7 +17,7 @@ class Game {
 
         this.hitBox = { x: -120, y: -80, w: 160, h: 160 };
 
-        this.message = 'POINT!';
+        this.message = Koji.config.strings.pointText;
         this.messageColor = color(0);
         this.messageTimer = 2;
         this.messageSpeed = 1;

@@ -23,21 +23,21 @@ class Ball {
             if (this.lastHit === 'opponent') {
                 if (this.x < 800 + this.bounceDist / 2) {
                     game.player.score += 1;
-                    game.showMessage('OUT!', color('#00CC66'));
+                    game.showMessage(Koji.config.strings.outText, color(Koji.config.colors.positiveTextColor));
                     sfx.clap.play();
                 } else {
                     game.opponent.score += 1;
-                    game.showMessage('POINT!', color('#D72638'));
+                    game.showMessage(Koji.config.strings.pointText, color(Koji.config.colors.negativeTextColor));
                     sfx.boo.play();
                 }
             } else { // player hit
                 if (this.x > 800 - this.bounceDist / 2) {
                     game.opponent.score += 1;
-                    game.showMessage('OUT!', color('#D72638'));
+                    game.showMessage(Koji.config.strings.outText, color(Koji.config.colors.negativeTextColor));
                     sfx.boo.play();
                 } else {
                     game.player.score += 1;
-                    game.showMessage('POINT!', color('#00CC66'));
+                    game.showMessage(Koji.config.strings.pointText, color(Koji.config.colors.positiveTextColor));
                     sfx.clap.play();
                 }
             }
