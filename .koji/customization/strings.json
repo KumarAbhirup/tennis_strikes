@@ -1,70 +1,26 @@
 {
   "strings": {
-    "levels": [
-      {
-        "background": "https://images.koji-cdn.com/2d9fb96c-9ee5-458c-93e9-022c355d3ca5/184p9-6003240fdffd413c99b89bd6834db57c.png",
-        "kicks": 3,
-        "position": "center",
-        "colors": {
-          "poleColor": "#C2D72E",
-          "OutsiderGoalColor": "#C3796990",
-          "MiddleGoalColor": "#FCECA490",
-          "CenterGoalColor": "#5D974D90"
-        }
+    "players": {
+      "user": {
+        "playerImage": "",
+        "playerImageWhenHitting": ""
       },
-      {
-        "background": "https://images.koji-cdn.com/2d9fb96c-9ee5-458c-93e9-022c355d3ca5/ive2r-8aa69bcf6a91478ba18e607a291cd2b2.png",
-        "kicks": 6,
-        "position": "left",
-        "colors": {
-          "poleColor": "#C2D72E",
-          "OutsiderGoalColor": "#C3796990",
-          "MiddleGoalColor": "#FCECA490",
-          "CenterGoalColor": "#5D974D90"
-        }
-      },
-      {
-        "background": "https://images.koji-cdn.com/2d9fb96c-9ee5-458c-93e9-022c355d3ca5/ive2r-8aa69bcf6a91478ba18e607a291cd2b2.png",
-        "kicks": 8,
-        "position": "right",
-        "colors": {
-          "poleColor": "#C2D72E",
-          "OutsiderGoalColor": "#C3796990",
-          "MiddleGoalColor": "#FCECA490",
-          "CenterGoalColor": "#5D974D90"
-        }
-      },
-      {
-        "background": "https://images.koji-cdn.com/2d9fb96c-9ee5-458c-93e9-022c355d3ca5/ive2r-8aa69bcf6a91478ba18e607a291cd2b2.png",
-        "kicks": 10,
-        "position": "center",
-        "colors": {
-          "poleColor": "#C2D72E",
-          "OutsiderGoalColor": "#C3796990",
-          "MiddleGoalColor": "#FCECA490",
-          "CenterGoalColor": "#5D974D90"
-        }
+      "computer": {
+        "playerImage": "",
+        "playerImageWhenHitting": ""
       }
-    ],
+    },
     "fontFamily": "https://fonts.googleapis.com/css?family=Viga&display=swap",
-    "title": "Kicker Mix",
-    "desktop_instructions1": "Kick the ball and score the maximum!",
-    "desktop_instructions2": "Press spacebar on the right time...",
-    "desktop_instructions3": "The more centered you aim, the more you score!",
-    "mobile_instructions1": "Kick the ball and score the maximum!",
-    "mobile_instructions2": "Tap on the right time...",
-    "mobile_instructions3": "The more centered you aim, the more you score!",
+    "title": "Teniss Strikes",
+    "desktop_instructions1": "Score maximum points in given time!",
+    "desktop_instructions2": "Drag to Move,",
+    "desktop_instructions3": "Hard click to hit.",
+    "mobile_instructions1": "Score maximum points in given time!",
+    "mobile_instructions2": "Touch Drag to Move,",
+    "mobile_instructions3": "Hit the ball while you drag.",
     "defaultPlayerName": "Enter your name",
     "playButtonText": "PLAY NOW",
     "leaderboardButtonText": "LEADERBOARD",
-    "stageText": "STAGE",
-    "scoreText": "SCORE",
-    "poleHitText": "POLE HIT!",
-    "wideLeftText": "WIDE LEFT!",
-    "wideRightText": "WIDE RIGHT!",
-    "score100Text": "NOT BAD!",
-    "score200Text": "GOOD!",
-    "score300Text": "SUPERB!",
     "gameOverText": "GAME OVER",
     "emailInputEnabled": false,
     "mainMenuBackgroundSize": ""
@@ -77,72 +33,41 @@
       "source": "strings.json",
       "fields": [
         {
-          "key": "levels",
-          "type": "object<Level>[]",
-          "arrayOptions": {
-            "min": "1",
-            "addItemLabel": "Add Level"
-          },
+          "key": "players",
+          "name": "Players",
+          "type": "object<Player>",
           "typeOptions": {
-            "Level": {
-              "background": {
-                "name": "Background Image",
-                "description": "The image for this level",
-                "type": "image"
-              },
-              "kicks": {
-                "name": "Kicks",
-                "description": "How many kicks for this level",
-                "type": "range",
+            "Player": {
+              "user": {
+                "name": "User",
+                "type": "object<User>",
                 "typeOptions": {
-                  "min": "1",
-                  "max": "10",
-                  "step": "1"
-                }
-              },
-              "colors": {
-                "name": "Colours of Goal Post",
-                "type": "object<GoalColor>",
-                "typeOptions": {
-                  "GoalColor": {
-                    "poleColor": {
-                      "name": "Pole Color",
-                      "type": "color"
+                  "User": {
+                    "playerImage": {
+                      "name": "Player Image",
+                      "type": "image"
                     },
-                    "OutsiderGoalColor": {
-                      "name": "Outsider Goal Color",
-                      "type": "color"
-                    },
-                    "MiddleGoalColor": {
-                      "name": "Middle Goal Color",
-                      "type": "color"
-                    },
-                    "CenterGoalColor": {
-                      "name": "Center Goal Color",
-                      "type": "color"
+                    "playerImageWhenHitting": {
+                      "name": "Player Image when Hitting",
+                      "type": "image"
                     }
                   }
                 }
               },
-              "position": {
-                "name": "Goalpost Position",
-                "type": "select",
+              "computer": {
+                "name": "Computer",
+                "type": "object<Computer>",
                 "typeOptions": {
-                  "placeholder": "Choose a position...",
-                  "options": [
-                    {
-                      "value": "left",
-                      "label": "Left"
+                  "Computer": {
+                    "playerImage": {
+                      "name": "Player Image",
+                      "type": "image"
                     },
-                    {
-                      "value": "center",
-                      "label": "Center"
-                    },
-                    {
-                      "value": "right",
-                      "label": "Right"
+                    "playerImageWhenHitting": {
+                      "name": "Player Image when Hitting",
+                      "type": "image"
                     }
-                  ]
+                  }
                 }
               }
             }
@@ -211,56 +136,6 @@
         {
           "key": "gameOverText",
           "name": "Game Over Text",
-          "type": "text"
-        },
-        {
-          "key": "shieldText",
-          "name": "Shield Text",
-          "type": "text"
-        },
-        {
-          "key": "speedText",
-          "name": "Speed Text",
-          "type": "text"
-        },
-        {
-          "key": "stageText",
-          "name": "Stage Text",
-          "type": "text"
-        },
-        {
-          "key": "scoreText",
-          "name": "Stage Text",
-          "type": "text"
-        },
-        {
-          "key": "poleHitText",
-          "name": "Pole Hit Text",
-          "type": "text"
-        },
-        {
-          "key": "wideLeftText",
-          "name": "Wide Left Text",
-          "type": "text"
-        },
-        {
-          "key": "wideRightText",
-          "name": "Wide Right Text",
-          "type": "text"
-        },
-        {
-          "key": "score100Text",
-          "name": "Score 100 Text",
-          "type": "text"
-        },
-        {
-          "key": "score200Text",
-          "name": "Score 200 Text",
-          "type": "text"
-        },
-        {
-          "key": "score300Text",
-          "name": "Score 300 Text",
           "type": "text"
         },
         {

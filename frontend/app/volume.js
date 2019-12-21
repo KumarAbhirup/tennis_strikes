@@ -13,7 +13,7 @@ volume.load = function () {
 volume.update = function (dt) {
     let rightX = targetWidth / 2 + width / scaleFactor / 2;
     volume.x = rightX - 30 - volume.w;
-    if (utils.mouseInRect(volume)) {
+    if (utils.mouseInRect(volume) && touchTimer > 0.5) {
         document.body.style.cursor = 'pointer';
     }
 }
@@ -31,5 +31,5 @@ volume.mousePressed = function () {
 }
 
 volume.draw = function () {
-    image(volume.muted ? gfx.speakerMuteWhite : gfx.speakerWhite, volume.x, volume.y, volume.w, volume.h);
+    image(volume.muted ? gfx.speakerMute : gfx.speaker, volume.x, volume.y, volume.w, volume.h);
 }

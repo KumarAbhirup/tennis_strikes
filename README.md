@@ -1,6 +1,6 @@
-# `Kicker Mix`
+# `Teniss Strikes`
 
-Start your day by kicking soccer balls!
+Play the teniss game with the computer!
 
 ## ⚒️ Customizations
 
@@ -78,7 +78,7 @@ $ git push github master # <- only if you also maintain a GitHub Repository
 
 ## 🤙 Wanna contribute❓
 
-Just shoot a Pull Request at [the official GitHub repository of this game 📦](https://github.com/KumarAbhirup)
+Just shoot a Pull Request at [the official GitHub repository of this game 📦](https://github.com/KumarAbhirup/tennis_strikes)
 
 Or follow me and DM on [Twitter @kumar_abhirup](https://twitter.com/kumar_abhirup) 🙌
 

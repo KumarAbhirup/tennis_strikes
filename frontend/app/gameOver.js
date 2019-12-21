@@ -11,11 +11,8 @@ gameOver.load = function () {
 gameOver.resetGame = function () {
     gameTime = 0;
     countdownTimer = 3;
+    game = new Game();
     game.load();
-
-    Koji.config.strings.levels.forEach((level, index) => {
-        game.stages[index].numBalls = level.kicks
-    })
 }
 
 gameOver.update = function (dt) {
@@ -28,29 +25,36 @@ gameOver.update = function (dt) {
 }
 
 gameOver.mousePressed = function () {
-    gameState = 'playing';
-    window.setScore(game.score);
-    gameOver.resetGame();
-    gameOver.load();
-    sfx.stadium.stop();
-    window.setAppView('setScore');
+    if (gameOver.t === 1) {
+        gameState = 'menu';
+        gameOver.resetGame();
+        gameOver.load();
+        sfx.music.stop();
+    }
 }
 
 gameOver.draw = function () {
     push();
 
-    fill(Koji.config.colors.gameOverRectangleColor);
+    // background rect
+    fill(9, 10, 49);
     rect(targetWidth / 2 - gameOver.w / 2, gameOver.y, gameOver.w, gameOver.h);
 
     // game over text
-    fill(Koji.config.colors.gameOverTextColor);
+    fill(255, 217, 90);
     textSize(48);
     textAlign(CENTER, CENTER);
-    text(Koji.config.strings.gameOverText, targetWidth / 2, gameOver.y + 44);
+    text('GAME OVER', targetWidth / 2, gameOver.y + 44);
 
-    // score
+    // win / lose / tie
     textSize(32);
-    text('SCORE: ' + game.score, targetWidth / 2, gameOver.y + 120);
+    if (game.player.score > game.opponent.score) {
+        text('YOU WON!', targetWidth / 2, gameOver.y + 120);
+    } else if (game.player.score < game.opponent.score) {
+        text('YOU LOST!', targetWidth / 2, gameOver.y + 120);
+    } else {
+        text('TIE!', targetWidth / 2, gameOver.y + 120);
+    }
 
     pop();
 }

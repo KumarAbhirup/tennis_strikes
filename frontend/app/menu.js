@@ -13,7 +13,7 @@ menu.load = function () {
 
 menu.update = function (dt) {
     menu.playButton.x = targetWidth / 2 - menu.playButton.w / 2;
-    if (utils.mouseInRect(menu.playButton)) {
+    if (utils.mouseInRect(menu.playButton) && touchTimer > 0.5) {
         document.body.style.cursor = 'pointer';
     }
 }
@@ -21,8 +21,7 @@ menu.update = function (dt) {
 menu.mousePressed = function () {
     if (utils.mouseInRect(menu.playButton)) {
         gameState = 'playing';
-        game.start();
-        sfx.stadium.play();
+        sfx.music.play();
         uiPressed = true;
     }
 }
@@ -36,7 +35,7 @@ menu.draw = function () {
     fill(255, 217, 90);
     textSize(40);
     textAlign(CENTER, CENTER);
-    text('American Football Kicks', targetWidth / 2, 160);
+    text('Tennis Fury', targetWidth / 2, 160);
 
     // play button
     if (utils.mouseInRect(menu.playButton)) {
