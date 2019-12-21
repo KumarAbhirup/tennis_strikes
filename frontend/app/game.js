@@ -79,7 +79,8 @@ class Game {
         push();
 
         // audience
-        image(gfx.audience, 0, 256 - 90 - gfx.audience.height);
+        image(gfx.audience, 0, 256 - 90 - gfx.audience.height)
+        // console.log(gfx.audience.height)
 
         // logos
         {

@@ -34,7 +34,7 @@ function preload() {
     gfx.netShadow = loadImage('https://i.ibb.co/hXFbPDH/net-Shadow.png');
     gfx.logo1 = loadImage(Koji.config.images.sponsorship.sponsor1);
     gfx.logo2 = loadImage(Koji.config.images.sponsorship.sponsor2);
-    gfx.audience = loadImage('https://i.ibb.co/Ry6fB62/audience.png');
+    gfx.audience = loadImage('https://i.ibb.co/vYdpQd1/audience.png');
     gfx.referee = loadImage('https://i.ibb.co/S54M6gC/referee.png');
     gfx.wallPickup = loadImage('https://i.ibb.co/p2fPX1C/wall-Pickup.png');
 
