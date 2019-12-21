@@ -2,14 +2,12 @@
   "quickstart": {
     "items": [
       "strings.title",
-      "images.ball",
+      "images.sponsorship",
+      "strings.players",
       "sounds.backgroundMusic",
-      "sounds.boo",
-      "sounds.clap",
-      "sounds.whoosh",
-      "sounds.impact",
-      "colors.scoreboardTextColor",
-      "colors.scoreboardBackgroundColor"
+      "images.audience",
+      "images.referee",
+      "colors.tennisNetRodColor"
     ]
   }
 }
