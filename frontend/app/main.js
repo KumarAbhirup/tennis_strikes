@@ -21,44 +21,36 @@ var game;
 var countdownTimer = 3;
 
 function preload() {
-    gfx.speaker = loadImage('gfx/speaker.png');
-    gfx.speakerMute = loadImage('gfx/speakerMute.png');
-    gfx.info = loadImage('gfx/info.png');
-    gfx.infoTouch = loadImage('gfx/infoTouch.png');
-    gfx.player = loadImage('gfx/player.png');
-    gfx.playerHit = loadImage('gfx/playerHit.png');
-    gfx.opponent = loadImage('gfx/opponent.png');
-    gfx.opponentHit = loadImage('gfx/opponentHit.png');
-    gfx.ball = loadImage('gfx/ball.png');
-    gfx.grass = loadImage('gfx/grass.png');
-    gfx.netShadow = loadImage('gfx/netShadow.png');
-    gfx.logo1 = loadImage('gfx/logo1.jpg');
-    gfx.logo2 = loadImage('gfx/logo2.jpg');
-    gfx.audience = loadImage('gfx/audience.png');
-    gfx.referee = loadImage('gfx/referee.png');
-    gfx.wallPickup = loadImage('gfx/wallPickup.png');
+    gfx.speaker = loadImage('https://i.ibb.co/jZxDRhS/speaker.png');
+    gfx.speakerMute = loadImage('https://i.ibb.co/DgJSmkK/speaker-Mute.png');
+    gfx.info = loadImage('https://i.ibb.co/bHvMbsJ/info.png');
+    gfx.infoTouch = loadImage('https://i.ibb.co/PMxTgpj/info-Touch.png');
+    gfx.player = loadImage('https://i.ibb.co/r5CjKYm/player.png');
+    gfx.playerHit = loadImage('https://i.ibb.co/wLgDbJD/player-Hit.png');
+    gfx.opponent = loadImage('https://i.ibb.co/fNY3xvq/opponent.png');
+    gfx.opponentHit = loadImage('https://i.ibb.co/grCqDPG/opponent-Hit.png');
+    gfx.ball = loadImage('https://i.ibb.co/zZJ7qDz/ball.png');
+    gfx.grass = loadImage('https://i.ibb.co/PxjthZt/grass.png');
+    gfx.netShadow = loadImage('https://i.ibb.co/hXFbPDH/net-Shadow.png');
+    gfx.logo1 = loadImage(Koji.config.images.sponsorship.sponsor1);
+    gfx.logo2 = loadImage(Koji.config.images.sponsorship.sponsor2);
+    gfx.audience = loadImage('https://i.ibb.co/Ry6fB62/audience.png');
+    gfx.referee = loadImage('https://i.ibb.co/S54M6gC/referee.png');
+    gfx.wallPickup = loadImage('https://i.ibb.co/p2fPX1C/wall-Pickup.png');
 
-    sfx.music = loadSound('sfx/music.mp3');
+    sfx.music = loadSound(Koji.config.sounds.backgroundMusic);
     sfx.music.setLoop(true);
     sfx.music.setVolume(0.5);
-    sfx.boo = loadSound('sfx/boo.wav');
-    sfx.clap = loadSound('sfx/clap.wav');
-    sfx.impact = loadSound('sfx/impact.wav');
+    sfx.boo = loadSound(Koji.config.sounds.whoosh);
+    sfx.clap = loadSound(Koji.config.sounds.whoosh);
+    sfx.impact = loadSound(Koji.config.sounds.whoosh);
 
     masterVolume(defaultVolume);
 }
 
 function setup() {
     let canvas = createCanvas(window.innerWidth, window.innerHeight);
-    canvas.parent('sketch');
-    $('canvas').bind('contextmenu', function (e) {
-        return false;
-    });
-    $('canvas').bind('mousedown', function (e) {
-        if (e.detail > 1) {
-            e.preventDefault();
-        }
-    });
+
     strokeJoin(ROUND);
     scaleFactor = min(width / targetWidth, height / targetHeight);
     fullW = width / scaleFactor;
@@ -76,6 +68,8 @@ function setup() {
 
     cam.x = targetWidth / 2;
     cam.y = targetHeight / 2;
+
+    sfx.music.play()
 }
 
 function update() {

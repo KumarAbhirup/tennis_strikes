@@ -26,10 +26,12 @@ gameOver.update = function (dt) {
 
 gameOver.mousePressed = function () {
     if (gameOver.t === 1) {
-        gameState = 'menu';
+        gameState = 'playing';
+        window.setScore(game.player.score);
         gameOver.resetGame();
         gameOver.load();
         sfx.music.stop();
+        window.setAppView('setScore');
     }
 }
 

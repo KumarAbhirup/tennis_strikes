@@ -13,12 +13,16 @@ class GameContainer extends Component {
     require('script-loader!app/utils.js')
     require('script-loader!app/main.js')
     require('script-loader!app/menu.js')
-    require('script-loader!app/game.js')
     require('script-loader!app/cam.js')
-    require('script-loader!app/popupText.js')
-    require('script-loader!app/gameOver.js')
     require('script-loader!app/volume.js')
-
+    require('script-loader!app/info.js')
+    require('script-loader!app/game.js')
+    require('script-loader!app/player.js')
+    require('script-loader!app/ball.js')
+    require('script-loader!app/opponent.js')
+    require('script-loader!app/pickup.js')
+    require('script-loader!app/gameOver.js')
+    
     let _playerName = Koji.config.strings.defaultPlayerName
     if (localStorage.getItem('playerName')) {
       _playerName = localStorage.getItem('playerName')

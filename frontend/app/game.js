@@ -23,7 +23,7 @@ class Game {
         this.messageSpeed = 1;
 
         // game length in seconds
-        this.timer = 60;
+        this.timer = 120;
     }
 
     load() {

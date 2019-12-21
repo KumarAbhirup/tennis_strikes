@@ -1,4 +1,4 @@
-# `Teniss Strikes`
+# `Tennis Strikes`
 
 Play the teniss game with the computer!
 
