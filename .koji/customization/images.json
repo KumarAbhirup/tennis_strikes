@@ -1,12 +1,20 @@
 {
   "images": {
-    "sound": "https://i.ibb.co/PDqs7HN/speaker.png",
-    "soundMute": "https://i.ibb.co/hyJVkQj/speaker-Mute.png",
-    "background": "",
+    "sound": "https://i.ibb.co/jZxDRhS/speaker.png",
+    "soundMute": "https://i.ibb.co/DgJSmkK/speaker-Mute.png",
     "sponsorship": {
       "sponsor1": "https://i.ibb.co/st69w1Z/logo1.jpg",
       "sponsor2": "https://i.ibb.co/st69w1Z/logo1.jpg"
-    }
+    },
+    "background": "",
+    "lawnBackground": "https://i.ibb.co/PxjthZt/grass.png",
+    "ball": "https://i.ibb.co/zZJ7qDz/ball.png",
+    "audience": "https://i.ibb.co/vYdpQd1/audience.png",
+    "referee": "https://i.ibb.co/S54M6gC/referee.png",
+    "wallPickup": "https://i.ibb.co/p2fPX1C/wall-Pickup.png",
+    "netShadow": "https://i.ibb.co/hXFbPDH/net-Shadow.png",
+    "infoDesktop": "https://i.ibb.co/bHvMbsJ/info.png",
+    "infoMobile": "https://i.ibb.co/PMxTgpj/info-Touch.png"
   },
   "@@editor": [
     {
@@ -34,6 +42,40 @@
           "type": "image"
         },
         {
+          "key": "lawnBackground",
+          "name": "Background in ground",
+          "description": "Grass texture recommended.",
+          "type": "image"
+        },
+        {
+          "key": "ball",
+          "name": "Ball Image",
+          "description": "Should be a transparent circle image. 100x100",
+          "type": "image"
+        },
+        {
+          "key": "netShadow",
+          "name": "Shadow of Net",
+          "description": "Recommended not changing unless you know what you are doing.",
+          "type": "image"
+        },
+        {
+          "key": "audience",
+          "name": "Audience",
+          "description": "Do not change unless you know what you are doing.",
+          "type": "image"
+        },
+        {
+          "key": "wallPickup",
+          "name": "Wall Pickup",
+          "type": "image"
+        },
+        {
+          "key": "referee",
+          "name": "Referee",
+          "type": "image"
+        },
+        {
           "key": "sponsorship",
           "name": "Sponsor Images",
           "type": "object<Sponsor>",
@@ -49,6 +91,16 @@
               }
             }
           }
+        },
+        {
+          "key": "infoDesktop",
+          "name": "Playing instructions (Desktop)",
+          "type": "image"
+        },
+        {
+          "key": "infoMobile",
+          "name": "Playing instructions (Mobile)",
+          "type": "image"
         }
       ]
     }

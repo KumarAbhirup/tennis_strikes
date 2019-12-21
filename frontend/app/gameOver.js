@@ -39,23 +39,23 @@ gameOver.draw = function () {
     push();
 
     // background rect
-    fill(9, 10, 49);
+    fill(Koji.config.colors.gameOverRectangleColor);
     rect(targetWidth / 2 - gameOver.w / 2, gameOver.y, gameOver.w, gameOver.h);
 
     // game over text
-    fill(255, 217, 90);
+    fill(Koji.config.colors.gameOverTextColor);
     textSize(48);
     textAlign(CENTER, CENTER);
-    text('GAME OVER', targetWidth / 2, gameOver.y + 44);
+    text(Koji.config.strings.gameOverText, targetWidth / 2, gameOver.y + 44);
 
     // win / lose / tie
     textSize(32);
     if (game.player.score > game.opponent.score) {
-        text('YOU WON!', targetWidth / 2, gameOver.y + 120);
+        text(Koji.config.strings.winText, targetWidth / 2, gameOver.y + 120);
     } else if (game.player.score < game.opponent.score) {
-        text('YOU LOST!', targetWidth / 2, gameOver.y + 120);
+        text(Koji.config.strings.loseText, targetWidth / 2, gameOver.y + 120);
     } else {
-        text('TIE!', targetWidth / 2, gameOver.y + 120);
+        text(Koji.config.strings.tieText, targetWidth / 2, gameOver.y + 120);
     }
 
     pop();

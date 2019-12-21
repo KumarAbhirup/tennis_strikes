@@ -21,29 +21,29 @@ var game;
 var countdownTimer = 3;
 
 function preload() {
-    gfx.speaker = loadImage('https://i.ibb.co/jZxDRhS/speaker.png');
-    gfx.speakerMute = loadImage('https://i.ibb.co/DgJSmkK/speaker-Mute.png');
-    gfx.info = loadImage('https://i.ibb.co/bHvMbsJ/info.png');
-    gfx.infoTouch = loadImage('https://i.ibb.co/PMxTgpj/info-Touch.png');
-    gfx.player = loadImage('https://i.ibb.co/r5CjKYm/player.png');
-    gfx.playerHit = loadImage('https://i.ibb.co/wLgDbJD/player-Hit.png');
-    gfx.opponent = loadImage('https://i.ibb.co/fNY3xvq/opponent.png');
-    gfx.opponentHit = loadImage('https://i.ibb.co/grCqDPG/opponent-Hit.png');
-    gfx.ball = loadImage('https://i.ibb.co/zZJ7qDz/ball.png');
-    gfx.grass = loadImage('https://i.ibb.co/PxjthZt/grass.png');
-    gfx.netShadow = loadImage('https://i.ibb.co/hXFbPDH/net-Shadow.png');
+    gfx.speaker = loadImage(Koji.config.images.sound);
+    gfx.speakerMute = loadImage(Koji.config.images.soundMute);
+    gfx.info = loadImage(Koji.config.images.infoDesktop);
+    gfx.infoTouch = loadImage(Koji.config.images.infoMobile);
+    gfx.player = loadImage(Koji.config.strings.players.user.playerImage);
+    gfx.playerHit = loadImage(Koji.config.strings.players.user.playerImageWhenHitting);
+    gfx.opponent = loadImage(Koji.config.strings.players.computer.playerImage);
+    gfx.opponentHit = loadImage(Koji.config.strings.players.computer.playerImageWhenHitting);
+    gfx.ball = loadImage(Koji.config.images.ball);
+    gfx.grass = loadImage(Koji.config.images.lawnBackground);
+    gfx.netShadow = loadImage(Koji.config.images.netShadow);
     gfx.logo1 = loadImage(Koji.config.images.sponsorship.sponsor1);
     gfx.logo2 = loadImage(Koji.config.images.sponsorship.sponsor2);
-    gfx.audience = loadImage('https://i.ibb.co/vYdpQd1/audience.png');
-    gfx.referee = loadImage('https://i.ibb.co/S54M6gC/referee.png');
-    gfx.wallPickup = loadImage('https://i.ibb.co/p2fPX1C/wall-Pickup.png');
+    gfx.audience = loadImage(Koji.config.images.audience);
+    gfx.referee = loadImage(Koji.config.images.referee);
+    gfx.wallPickup = loadImage(Koji.config.images.wallPickup);
 
     sfx.music = loadSound(Koji.config.sounds.backgroundMusic);
     sfx.music.setLoop(true);
     sfx.music.setVolume(0.5);
-    sfx.boo = loadSound(Koji.config.sounds.whoosh);
-    sfx.clap = loadSound(Koji.config.sounds.whoosh);
-    sfx.impact = loadSound(Koji.config.sounds.whoosh);
+    sfx.boo = loadSound(Koji.config.sounds.boo);
+    sfx.clap = loadSound(Koji.config.sounds.clap);
+    sfx.impact = loadSound(Koji.config.sounds.impact);
 
     masterVolume(defaultVolume);
 }
@@ -210,7 +210,7 @@ function draw() {
 
             // countdown
             if (countdownTimer >= 0) {
-                fill(0);
+                fill(Koji.config.colors.gameCountdownColor);
                 textSize(lerp(64, 96, ease.outCubic(utils.pingPong(countdownTimer * 2))));
                 textAlign(CENTER, CENTER);
                 text(floor(countdownTimer) + 1, targetWidth / 2, targetHeight / 2);

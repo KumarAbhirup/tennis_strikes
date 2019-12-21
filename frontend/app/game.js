@@ -1,7 +1,7 @@
 
 class Game {
     constructor() {
-        this.netColor = color('#365ED5');
+        this.netColor = color(Koji.config.colors.tennisNetRodColor);
         this.courtLineWidth = 10;
         let w1 = 400;
         let w2 = 300;
@@ -101,13 +101,13 @@ class Game {
         {
             let w = 354;
             let h = 256 - 90;
-            fill('#2D51D7');
+            fill(Koji.config.colors.scoreboardBackgroundColor);
             rect(800 - w / 2, 0, w, h, 20);
-            fill('#223FAA');
+            fill(Koji.config.colors.scoreboardForegroundColor);
             rect(800 - 100, 0, 200, h / 2 - w / 32, 20);
             rect(800 - w * 15 / 32, h / 2, w * 14 / 32, h / 2 - w / 32, 20);
             rect(800 + w / 32, h / 2, w * 14 / 32, h / 2 - w / 32, 20);
-            fill(255);
+            fill(Koji.config.colors.scoreboardTextColor);
             textAlign(CENTER, CENTER);
             textSize(48);
             let sMinutes = String(floor(this.timer / 60)).padStart(2, '0');

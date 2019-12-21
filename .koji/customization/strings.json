@@ -2,12 +2,12 @@
   "strings": {
     "players": {
       "user": {
-        "playerImage": "",
-        "playerImageWhenHitting": ""
+        "playerImage": "https://i.ibb.co/r5CjKYm/player.png",
+        "playerImageWhenHitting": "https://i.ibb.co/wLgDbJD/player-Hit.png"
       },
       "computer": {
-        "playerImage": "",
-        "playerImageWhenHitting": ""
+        "playerImage": "https://i.ibb.co/fNY3xvq/opponent.png",
+        "playerImageWhenHitting": "https://i.ibb.co/grCqDPG/opponent-Hit.png"
       }
     },
     "fontFamily": "https://fonts.googleapis.com/css?family=Viga&display=swap",
@@ -22,6 +22,9 @@
     "playButtonText": "PLAY NOW",
     "leaderboardButtonText": "LEADERBOARD",
     "gameOverText": "GAME OVER",
+    "winText": "YOU WON!",
+    "loseText": "YOU LOST!",
+    "tieText": "NICE TIE!",
     "emailInputEnabled": false,
     "mainMenuBackgroundSize": ""
   },
@@ -113,6 +116,21 @@
         {
           "key": "mobile_instructions3",
           "name": "Mobile Game Instructions 3",
+          "type": "text"
+        },
+        {
+          "key": "winText",
+          "name": "Win Text",
+          "type": "text"
+        },
+        {
+          "key": "loseText",
+          "name": "Lose Text",
+          "type": "text"
+        },
+        {
+          "key": "tieText",
+          "name": "Tie Text",
           "type": "text"
         },
         {

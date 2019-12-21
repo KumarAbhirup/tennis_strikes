@@ -13,12 +13,12 @@
     "playButtonClickColor": "#ffda5a",
     "buttonHoverColor": "#23bcc5",
     "buttonClickColor": "#2CECF5",
-    "scoreboardTextColor": "#E51C23",
-    "scoreboardBackgroundColor": "#000000",
+    "tennisNetRodColor": "#365ED5",
+    "scoreboardTextColor": "#ffffff",
+    "scoreboardBackgroundColor": "#2D51D7",
+    "scoreboardForegroundColor": "#223FAA",
     "gameOverRectangleColor": "#0a0a31",
     "gameOverTextColor": "#ffffff",
-    "shieldProgressBarColor": "#000000",
-    "speedProgressBarColor": "#ff0000",
     "gameCountdownColor": "#000000"
   },
   "@@editor": [
@@ -89,6 +89,11 @@
           "type": "color"
         },
         {
+          "key": "tennisNetRodColor",
+          "name": "Tennis Net Rod Color",
+          "type": "color"
+        },
+        {
           "key": "scoreboardTextColor",
           "name": "Scoreboard Text Color",
           "type": "color"
@@ -96,6 +101,11 @@
         {
           "key": "scoreboardBackgroundColor",
           "name": "Scoreboard Background Color",
+          "type": "color"
+        },
+        {
+          "key": "scoreboardForegroundColor",
+          "name": "Scoreboard Foreground Color",
           "type": "color"
         },
         {
@@ -111,16 +121,6 @@
         {
           "key": "gameOverTextColor",
           "name": "Game Over Text Color",
-          "type": "color"
-        },
-        {
-          "key": "shieldProgressBarColor",
-          "name": "Shield Progress Bar Color",
-          "type": "color"
-        },
-        {
-          "key": "speedProgressBarColor",
-          "name": "Speed Progress Bar Color",
           "type": "color"
         },
         {
