@@ -5,7 +5,7 @@ class Player {
         this.y = y;
         this.w = 160;
         this.h = 160;
-        this.speed = 350;
+        this.speed = 450;
         this.score = 0;
         this.hitTimer = 2;
         this.hitSpeed = 4; // animation speed
